@@ -58,7 +58,7 @@ const PaymentForm = ({ navigation }) => {
             >
               <Text
                 style={{
-                  fontSize: 28,
+                  fontSize: 26,
                   color: "#FFF",
                   fontWeight: "bold",
                 }}

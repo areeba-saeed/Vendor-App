@@ -35,7 +35,6 @@ const Device1 = ({ navigation }) => {
         >
           <View
             style={{
-              
               marginTop: 20,
             }}
           >
@@ -63,7 +62,7 @@ const Device1 = ({ navigation }) => {
         </View>
         <View
           style={{
-            height: windowHeight - 500,
+            height: "35%",
             width: windowWidth,
             marginTop: 10,
             backgroundColor: "#FFF",
@@ -85,16 +84,18 @@ const Device1 = ({ navigation }) => {
             height: windowHeight - 600,
             width: windowWidth,
             marginTop: 10,
-            //backgroundColor:'#FFF',
+            paddingLeft: 15,
+            paddingRight: 15,
+            flexDirection: "column",
+            //backgroundColor:'#FFF','
           }}
         >
           <View
             style={{
-              width: 160,
+              width: "45%",
               height: 135,
               backgroundColor: "#E6E6E6",
-              marginTop: 5,
-              marginLeft: 10,
+
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "space-evenly",
@@ -113,11 +114,11 @@ const Device1 = ({ navigation }) => {
           </View>
           <View
             style={{
-              width: 160,
+              width: "45%",
               height: 135,
               backgroundColor: "#E6E6E6",
-              marginLeft: 190,
-              marginTop: -135,
+              position: "absolute",
+              right:20,
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "space-evenly",
@@ -137,10 +138,9 @@ const Device1 = ({ navigation }) => {
         </View>
         <View
           style={{
-            //width: windowWidth-200,
             marginLeft: 10,
             marginRight: 10,
-            marginTop: 20,
+            marginTop: "5%",
           }}
         >
           <Button

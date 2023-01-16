@@ -13,7 +13,6 @@ import Devices from "../src/screens/Devices";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Users from "../src/screens/Users";
 
-
 const Drawer = createDrawerNavigator();
 
 export function DrawerContent(props) {

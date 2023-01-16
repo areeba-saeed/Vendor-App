@@ -14,7 +14,7 @@ const InvoiceTable = ({ setClicked, data }) => {
   const renderItem = ({ item, index }) => {
     return (
       <View style={styles.row} key={index}>
-        <Text style={styles.textId}>{item.Invoice_No}</Text>
+        <Text style={styles.text}>{item.Invoice_No}</Text>
         <Text style={styles.text}>{item.status}</Text>
         <Text style={styles.text}>{item.Amount}</Text>
 
@@ -22,15 +22,14 @@ const InvoiceTable = ({ setClicked, data }) => {
           <Text
             style={{
               backgroundColor: "orange",
-              width: 50,
-              height: 30,
+              width: 60,
               textAlign: "center",
-              paddingTop: 5,
+              fontSize: 12,
+              // paddingTop: "1%",
               color: "white",
               borderRadius: 5,
-              marginLeft: 25,
-              marginRight: 20,
-              marginTop: 10,
+              marginRight: "12%",
+              marginTop: 5,
             }}
           >
             Invoice
@@ -91,30 +90,35 @@ const styles = StyleSheet.create({
   },
 
   headtext: {
-    width: windowWidth - 300,
-    marginLeft: 25,
+    width: windowWidth - 600,
+    marginLeft: 4,
     marginRight: 20,
   },
   view: {
     height: 0,
   },
   text: {
-    width: windowWidth - 400,
-    marginLeft: 25,
+    width: windowWidth - 600,
+    marginTop: 8,
+    marginLeft: 4,
     marginRight: 20,
-    marginTop: 10,
-
-  },
-  textId: {
-    width: windowWidth - 280,
-    paddingLeft: 25,
-    marginTop: 10,
-
+    fontSize: 12,
   },
   row: {
     flexDirection: "row",
-    justifyContent: "space-between",
     backgroundColor: "lightgray",
+    justifyContent: "space-between",
+    marginLeft: 20,
+  },
+
+  icon: {
+    marginLeft: 30,
+  },
+  icons: {
+    marginTop: 8,
+    marginRight: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
 

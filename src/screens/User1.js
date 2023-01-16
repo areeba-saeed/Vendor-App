@@ -7,6 +7,7 @@ import { windowWidth } from "../../src/utils/Dimensions";
 import Users from "./Users";
 import { Row, Table, TableWrapper } from "react-native-table-component";
 import Device1 from "./Device1";
+import { ScrollView } from "react-native-gesture-handler";
 
 const User1 = ({ navigation }) => {
   const tableHead = ["Device ID", "Action"];
@@ -92,19 +93,18 @@ const User1 = ({ navigation }) => {
         </View>
         <View
           style={{
-            height: windowHeight - 500,
+            height: "25%",
             width: windowWidth,
             marginTop: 10,
             backgroundColor: "#FFF",
             padding: 20,
-            
           }}
         >
           <Text
             style={{
               fontSize: 20,
               width: windowWidth,
-              alignItems:"center",
+              alignItems: "center",
               textAlign: "center",
             }}
           >
@@ -118,7 +118,7 @@ const User1 = ({ navigation }) => {
           >
             Name
           </Text>
-          
+
           <Text
             style={{
               fontSize: 15,
@@ -137,17 +137,19 @@ const User1 = ({ navigation }) => {
               textStyle={styles.headtext}
             />
           </Table>
-          {data.map((user) => (
-            <TableWrapper style={styles.row}>
-              <Text style={styles.text}>{user.userId}</Text>
-              
-              <TouchableOpacity onPress={() => navigation.navigate(Device1)}>
-                <View style={styles.btn}>
-                  <Text style={styles.btnText}>View</Text>
-                </View>
-              </TouchableOpacity>
-            </TableWrapper>
-          ))}
+          <ScrollView>
+            {data.map((user) => (
+              <TableWrapper style={styles.row}>
+                <Text style={styles.text}>{user.userId}</Text>
+
+                <TouchableOpacity onPress={() => navigation.navigate(Device1)}>
+                  <View style={styles.btn}>
+                    <Text style={styles.btnText}>View</Text>
+                  </View>
+                </TouchableOpacity>
+              </TableWrapper>
+            ))}
+          </ScrollView>
         </View>
         <View
           style={{
@@ -178,7 +180,7 @@ const styles = StyleSheet.create({
   },
 
   headtext: {
-    width: 70,
+    width: windowWidth - 240,
     marginLeft: 20,
     marginRight: 20,
   },
@@ -186,24 +188,25 @@ const styles = StyleSheet.create({
     height: 0,
   },
   text: {
-    width: 70,
-    marginTop:8,
+    width: windowWidth - 250,
+    marginTop: 8,
     marginLeft: 30,
     marginRight: 20,
+    fontSize: 12,
   },
   row: {
     flexDirection: "row",
-    justifyContent:"space-between",
+    justifyContent: "space-between",
     backgroundColor: "lightgray",
   },
 
   btn: {
-    width: 60,
-    height: 20,
+    width: "33%",
     backgroundColor: "rgb(255, 177, 33)",
     borderRadius: 2,
     marginTop: 8,
-    marginRight:100
+    marginRight: "40%",
+    marginLeft: -30,
   },
   btnText: {
     textAlign: "center",

@@ -9,8 +9,7 @@ import UpdateUser from "../screens/UpdateUser";
 import Assign from "../screens/Assign";
 import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
 
-const Item = ({ userId, name,index }) => {
- 
+const Item = ({ userId, name, index }) => {
   const navigation = useNavigation();
 
   return (
@@ -42,7 +41,7 @@ const UserTable = ({ searchPhrase, setClicked, data }) => {
   const renderItem = ({ item, index }) => {
     // when no input, show all
     if (searchPhrase === "") {
-      return <Item userId={item.userId} name={item.name} index={index}/>;
+      return <Item userId={item.userId} name={item.name} index={index} />;
     }
     // filter of the userId
     if (
@@ -50,7 +49,7 @@ const UserTable = ({ searchPhrase, setClicked, data }) => {
         .toUpperCase()
         .includes(searchPhrase.toUpperCase().trim().replace(/\s/g, ""))
     ) {
-      return <Item userId={item.userId} name={item.name} index={index}/>;
+      return <Item userId={item.userId} name={item.name} index={index} />;
     }
     // filter of the description
     if (
@@ -112,10 +111,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#D9DDDC",
     flexDirection: "row",
     justifyContent: "space-between",
+    paddingLeft: "6%",
   },
 
   headtext: {
-    width: 70,
+    width: windowWidth - 600,
     marginLeft: 4,
     marginRight: 20,
   },
@@ -123,35 +123,28 @@ const styles = StyleSheet.create({
     height: 0,
   },
   text: {
-    width: 75,
-    margin: 8,
-    marginLeft: 10,
-    marginRight: 20,
+    width: "33%",
+    marginTop: 8,
+    marginLeft: 4,
+    fontSize: 12,
   },
   row: {
     flexDirection: "row",
     backgroundColor: "lightgray",
+    justifyContent: "space-between",
+    marginLeft: "4%",
   },
 
-  btn: {
-    width: 60,
-    height: 20,
-    backgroundColor: "rgb(255, 177, 33)",
-    borderRadius: 2,
-    margin: 4,
-    marginTop: 8,
-  },
   icon: {
-    margin: 5,
-    marginLeft: 18,
+    marginLeft: "5%",
   },
   icons: {
+    marginTop: 8,
+    width: "23%",
+
+    marginRight: windowWidth - 350,
     flexDirection: "row",
     justifyContent: "space-between",
-  },
-  btnText: {
-    textAlign: "center",
-    color: "#fff",
   },
 });
 

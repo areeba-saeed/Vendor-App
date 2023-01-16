@@ -10,7 +10,7 @@ import UserTable from "../components/UserTable";
 import Notifications from "./Notifications";
 import Users from "./Users";
 import SearchBar from "../components/SearchBar";
-import Noti from "./Noti";
+// import Noti from "./Noti";
 
 const Home = ({ navigation }) => {
   const nav = useNavigation();
@@ -228,25 +228,25 @@ const Home = ({ navigation }) => {
           <View
             style={{
               alignItems: "center",
-              marginTop: windowHeight - 700,
-              justifyContent: "center",
-              height: windowHeight - 450,
+              // marginTop: windowHeight - 700,
+              // justifyContent: "center",
+              height: windowHeight - 350,
               width: windowWidth,
-              alignItems: "center",
-              paddingLeft: 110,
-              paddingRight: 70,
+              marginTop: "5%",
+              marginLeft: "5%",
+              marginRight: "10%",
+              marginBottom: "5%",
+
+              // alignItems: "center",
             }}
           >
             <Image
               source={require("../../assets/images/logo_1.png")}
               style={{
-                height: windowHeight - 390,
-                width: windowWidth,
+                height: windowHeight - 500,
+                width: windowWidth - 120,
                 alignItems: "center",
-                paddingLeft: 100,
-                paddingRight: 70,
-                marginBottom: 20,
-                marginTop: 20,
+                resizeMode: "contain",
               }}
             />
           </View>
@@ -302,9 +302,9 @@ const Home = ({ navigation }) => {
           />
         </View>
       </View>
-      <View>
+      {/* <View>
         <Noti />
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 };

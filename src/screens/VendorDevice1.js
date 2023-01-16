@@ -2,14 +2,11 @@ import { View, Text, TouchableOpacity, Button } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AntDesign from "react-native-vector-icons/AntDesign";
-import { windowHeight } from "../utils/Dimensions";
-import { windowWidth } from "../utils/Dimensions";
+import { windowHeight } from "../../src/utils/Dimensions";
+import { windowWidth } from "../../src/utils/Dimensions";
 import Weight from "react-native-vector-icons/FontAwesome5";
 import Battery from "react-native-vector-icons/Entypo";
-import Cylinder from "react-native-vector-icons/MaterialCommunityIcons";
-import Refuel from "./Refuel";
 import Devices from "./Devices";
-
 
 const VendorDevice1 = ({ navigation }) => {
   return (
@@ -37,8 +34,6 @@ const VendorDevice1 = ({ navigation }) => {
         >
           <View
             style={{
-              //flexDirection: 'row',
-              //justifyContent: 'space-between',
               marginTop: 20,
             }}
           >
@@ -66,7 +61,7 @@ const VendorDevice1 = ({ navigation }) => {
         </View>
         <View
           style={{
-            height: windowHeight - 500,
+            height: "35%",
             width: windowWidth,
             marginTop: 10,
             backgroundColor: "#FFF",
@@ -85,19 +80,21 @@ const VendorDevice1 = ({ navigation }) => {
 
         <View
           style={{
-            height: windowHeight - 480,
+            height: windowHeight - 600,
             width: windowWidth,
             marginTop: 10,
-            //backgroundColor:'#FFF',
+            paddingLeft: 15,
+            paddingRight: 15,
+            flexDirection: "column",
+            //backgroundColor:'#FFF','
           }}
         >
           <View
             style={{
-              width: 160,
+              width: "45%",
               height: 135,
               backgroundColor: "#E6E6E6",
-              marginTop: 5,
-              marginLeft: 10,
+
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "space-evenly",
@@ -116,11 +113,11 @@ const VendorDevice1 = ({ navigation }) => {
           </View>
           <View
             style={{
-              width: 160,
+              width: "45%",
               height: 135,
               backgroundColor: "#E6E6E6",
-              marginLeft: 190,
-              marginTop: -135,
+              position: "absolute",
+              right: 20,
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "space-evenly",
@@ -137,18 +134,6 @@ const VendorDevice1 = ({ navigation }) => {
               80%
             </Text>
           </View>
-
-         
-        </View>
-        <View
-          style={{
-            //width: windowWidth-200,
-            marginLeft: 10,
-            marginRight: 10,
-            marginTop: 25,
-          }}
-        >
-          
         </View>
       </View>
     </SafeAreaView>

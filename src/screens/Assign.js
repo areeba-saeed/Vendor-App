@@ -154,7 +154,7 @@ const Assign = ({ navigation }) => {
             <Button title="Assign" color="orange" onPress={onCHange} />
           </View>
         </View>
-        <View style={{ height: windowHeight - 300 }}>
+        <View style={{ height: "60%" }}>
           <FlatList
             stickyHeaderIndices={[0]}
             ListHeaderComponent={

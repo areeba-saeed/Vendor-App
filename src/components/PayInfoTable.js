@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Alert } from 'react-native';
-import { Table, TableWrapper, Row, Cell } from 'react-native-table-component';
-import { windowHeight, windowWidth } from '../utils/Dimensions';
+import React, { Component } from "react";
+import { StyleSheet, View, Text, TouchableOpacity, Alert } from "react-native";
+import { Table, TableWrapper, Row, Cell } from "react-native-table-component";
+import { windowHeight, windowWidth } from "../utils/Dimensions";
 
 export default class PayInfoTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tableHead: ['S.No', 'Bank Name', 'Account Name', 'Account Number'],
+      tableHead: ["S.No", "Bank Name", "Account Name", "Account Number"],
       tableData: [
-        ['1', 'HBL', 'Al - Hood Gas', '00xxxxxxxxxx00'],
-        ['2', 'EasyPaisa', 'Al - Hood Gas', '00xxxxxxxxxx00'],
-        ['3', 'JazzCash', 'Al - Hood Gas', '00xxxxxxxxxx00'],
-      ]
-    }
+        ["1", "HBL", "Al - Hood Gas", "00xxxxxxxxxx00"],
+        ["2", "EasyPaisa", "Al - Hood Gas", "00xxxxxxxxxx00"],
+        ["3", "JazzCash", "Al - Hood Gas", "00xxxxxxxxxx00"],
+      ],
+    };
   }
 
   _alertIndex(index) {
@@ -31,56 +31,64 @@ export default class PayInfoTable extends Component {
     );
 
     return (
-      <View style={{
-        height:windowHeight,
-        width:windowWidth,
-      }}>
-      <View style={styles.container}>
-        <Table borderStyle={{borderColor: 'transparent',borderWidth:1}}>
-          <Row data={state.tableHead} style={styles.head} textStyle={styles.text}/>
-          {
-            state.tableData.map((rowData, index) => (
+      <View
+        style={{
+          height: windowHeight,
+          width: windowWidth,
+        }}
+      >
+        <View style={styles.container}>
+          <Table borderStyle={{ borderColor: "transparent", borderWidth: 1 }}>
+            <Row
+              data={state.tableHead}
+              style={styles.head}
+              textStyle={styles.headText}
+            />
+            {state.tableData.map((rowData, index) => (
               <TableWrapper key={index} style={styles.row}>
-                {
-                  rowData.map((cellData, cellIndex) => (
-                    <Cell key={cellIndex} data={cellIndex === 4 ? element(cellData, index) : cellData} textStyle={styles.text}/>
-                  ))
-                }
+                {rowData.map((cellData, cellIndex) => (
+                  <Cell
+                    key={cellIndex}
+                    data={cellIndex === 4 ? element(cellData, index) : cellData}
+                    textStyle={styles.text}
+                  />
+                ))}
               </TableWrapper>
-            ))
-          }
-        </Table>
+            ))}
+          </Table>
+        </View>
       </View>
-      </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    padding: 10, 
-    paddingTop: 30, 
+    flex: 1,
+    padding: 10,
+    paddingTop: 30,
   },
-  head: { 
-    height: 70, 
-    backgroundColor: '#D9DDDC' 
+  head: {
+    height: 70,
+    backgroundColor: "#D9DDDC",
   },
-  text: { 
-    margin: 8, 
+ 
+  text: {
+    margin: 8,
+    fontSize: 12,
   },
-  row: { 
-    flexDirection: 'row', 
-    backgroundColor: 'lightgray', 
+  row: {
+    flexDirection: "row",
+    backgroundColor: "lightgray",
   },
-  btn: { 
-    width: 60, 
-    height: 20, 
-    backgroundColor: '#78B7BB',  
-    borderRadius: 2 
+  btn: {
+    width: 60,
+    height: 20,
+    backgroundColor: "#78B7BB",
+    borderRadius: 2,
   },
-  btnText: { 
-    textAlign: 'center', 
-    color: '#fff' 
+  btnText: {
+    textAlign: "center",
+    color: "#fff",
   },
 });

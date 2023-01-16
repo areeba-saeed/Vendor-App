@@ -8,7 +8,6 @@ import VendorDevice1 from "../screens/VendorDevice1";
 import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
 
 const Item = ({ DeviceId, status, index }) => {
-
   const navigation = useNavigation();
 
   return (
@@ -17,7 +16,7 @@ const Item = ({ DeviceId, status, index }) => {
       <Text style={styles.text}>{status}</Text>
 
       <TouchableOpacity onPress={() => navigation.navigate(VendorDevice1)}>
-        <View style={{ marginLeft: 30 }}>
+        <View style={{ marginRight: 190 }}>
           <FontAwesome5Icon name="angle-right" size={25} color="orange" />
         </View>
       </TouchableOpacity>
@@ -26,18 +25,22 @@ const Item = ({ DeviceId, status, index }) => {
 };
 const DeviceTable = ({ searchPhrase, setClicked, data }) => {
   const tableHead = ["DeviceId", "Status", "Action"];
-  const renderItem = ({ item ,index}) => {
+  const renderItem = ({ item, index }) => {
     // when no input, show all
     if (searchPhrase === "") {
-      return <Item DeviceId={item.DeviceId} status={item.status} index={index} />;
+      return (
+        <Item DeviceId={item.DeviceId} status={item.status} index={index} />
+      );
     }
     // filter of the DeviceId
     if (
-      item.DeviceId
-        .toUpperCase()
-        .includes(searchPhrase.toUpperCase().trim().replace(/\s/g, ""))
+      item.DeviceId.toUpperCase().includes(
+        searchPhrase.toUpperCase().trim().replace(/\s/g, "")
+      )
     ) {
-      return <Item DeviceId={item.DeviceId} status={item.status} index={index}/>;
+      return (
+        <Item DeviceId={item.DeviceId} status={item.status} index={index} />
+      );
     }
     // filter of the description
     if (
@@ -45,7 +48,9 @@ const DeviceTable = ({ searchPhrase, setClicked, data }) => {
         .toUpperCase()
         .includes(searchPhrase.toUpperCase().trim().replace(/\s/g, ""))
     ) {
-      return <Item DeviceId={item.DeviceId} status={item.status}index={index} />;
+      return (
+        <Item DeviceId={item.DeviceId} status={item.status} index={index} />
+      );
     }
   };
 
@@ -99,38 +104,42 @@ const styles = StyleSheet.create({
     backgroundColor: "#D9DDDC",
     flexDirection: "row",
     justifyContent: "space-between",
+    paddingLeft: "6%",
+    width: windowWidth,
   },
 
   headtext: {
-    width: 70,
-    marginLeft: 25,
+    width: windowWidth - 600,
+    marginLeft: 4,
     marginRight: 20,
   },
   view: {
     height: 0,
   },
   text: {
-    width: 75,
-    margin: 8,
-    marginLeft: 24,
-    marginRight: 20,
+    width: "33%",
+    marginTop: 8,
+    marginLeft: 4,
+    fontSize: 12,
   },
   row: {
     flexDirection: "row",
     backgroundColor: "lightgray",
+    justifyContent: "space-between",
+    marginLeft: "4%",
+    width: windowWidth,
+
   },
 
-  btn: {
-    width: 60,
-    height: 20,
-    backgroundColor: "rgb(255, 177, 33)",
-    borderRadius: 2,
-    margin: 4,
-    marginTop: 8,
+  icon: {
+    marginLeft: "5%",
   },
-  btnText: {
-    textAlign: "center",
-    color: "#fff",
+  icons: {
+    marginTop: 8,
+    width: "23%",
+    marginRight: windowWidth - 350,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
 

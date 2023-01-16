@@ -35,7 +35,6 @@ export const MyStack = () => {
         <Stack.Screen name="Device1" component={Device1} />
         <Stack.Screen name="FAQ" component={FAQ} />
         <Stack.Screen name="Assign" component={Assign} />
-        <Stack.Screen name="Users" component={Users} />
         <Stack.Screen name="User1" component={User1} />
         <Stack.Screen name="CreateUser" component={CreateUser} />
         <Stack.Screen name="Invoice1" component={Invoice1} />
