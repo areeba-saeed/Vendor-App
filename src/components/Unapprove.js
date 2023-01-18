@@ -8,7 +8,7 @@ import Invoice1 from "../screens/Invoice1";
 import { Image } from "react-native";
 
 const UnApprove = ({ setClicked, window }) => {
-  const tableHead = ["UserId", "Amount", "ScreenShot", "Action"];
+  const tableHead = ["UserId", "Amount", "SnapShot", "Action"];
   const navigation = useNavigation();
   const [show, setShow] = useState(false);
   const [itemInfo, setItemInfo] = useState("");
@@ -122,7 +122,7 @@ const UnApprove = ({ setClicked, window }) => {
               height: 20,
               width: 20,
               marginLeft: "12%",
-              marginBottom: "40%",
+              marginBottom: "50%",
             }}
           >
             <Image
@@ -152,7 +152,7 @@ const UnApprove = ({ setClicked, window }) => {
               padding: 5,
               color: "white",
               borderRadius: 5,
-              marginRight: "12%",
+              marginRight: "10%",
               marginTop: "10%",
             }}
           >

@@ -8,7 +8,7 @@ import Invoice1 from "../screens/Invoice1";
 import { Image } from "react-native";
 
 const Approve = ({ setClicked, window }) => {
-  const tableHead = ["UserId", "Amount", "ScreenShot", "Action"];
+  const tableHead = ["UserId", "Amount", "SnapShot", "Action"];
   const navigation = useNavigation();
   const [show, setShow] = useState(false);
   const [itemInfo, setItemInfo] = useState("");
@@ -119,7 +119,7 @@ const Approve = ({ setClicked, window }) => {
               height: 20,
               width: 20,
               marginLeft: "12%",
-              marginBottom: "40%",
+              marginBottom: "50%",
             }}
           >
             <Image
