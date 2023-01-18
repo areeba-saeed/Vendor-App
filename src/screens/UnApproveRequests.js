@@ -65,7 +65,7 @@ const UnApproveRequests = ({ navigation }) => {
             <View
               style={{
                 //width:'100%',
-                marginTop: -33,
+                marginTop: -3,
                 alignItems: "center",
               }}
             >

@@ -4,17 +4,13 @@ import { Table, Row } from "react-native-table-component";
 import { windowHeight, windowWidth } from "../utils/Dimensions";
 import { useNavigation } from "@react-navigation/native";
 import { FlatList } from "react-native-gesture-handler";
-import Invoice1 from "../screens/Invoice1";
-import { Image } from "react-native";
 
 const Approve = ({ setClicked, window }) => {
-  const tableHead = ["UserId", "Amount", "SnapShot", "Action"];
+  const tableHead = ["UserId", "Amount", "Status", "Details"];
   const navigation = useNavigation();
   const [show, setShow] = useState(false);
-  const [itemInfo, setItemInfo] = useState("");
   const [itemInfoId, setItemInfoId] = useState("");
   const [itemKey, setItemKey] = useState();
-  const [itemAmpount, setItemAmount] = useState("");
   const [itemStatus, setItemStatus] = useState("");
   const [itemCreationDate, setItemCreationDate] = useState("");
   const [itemNoOfDevices, setItemNoOfDevices] = useState("");
@@ -28,7 +24,8 @@ const Approve = ({ setClicked, window }) => {
       creationDate: "2/1/2023",
       amount: "200",
       noOfDevices: "2",
-      img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      View: "View",
+      //   img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     },
     {
       userId: "02",
@@ -100,41 +97,35 @@ const Approve = ({ setClicked, window }) => {
       <View style={styles.row} key={index}>
         <Text style={styles.text}>{item.userId}</Text>
         <Text style={styles.text}>{item.amount}</Text>
+        <Text style={styles.status}>{item.status}</Text>
+
         <TouchableOpacity
           onPress={() => {
-            setItemInfo(item.img);
             setItemKey(index);
             setShow(true);
             setItemInfoId(item.userId);
-            setItemAmount(item.amount);
             setItemCreationDate(item.creationDate);
             setItemNoOfDevices(item.noOfDevices);
             setItemStatus(item.status);
             setItemName(item.username);
           }}
         >
-          <View
+          <Text
             style={{
-              alignItems: "center",
-              height: 20,
-              width: 20,
-              marginLeft: "12%",
-              marginBottom: "50%",
+              backgroundColor: "orange",
+              width: 60,
+              textAlign: "center",
+              fontSize: 12,
+              padding: 5,
+              color: "white",
+              borderRadius: 5,
+              marginRight: "10%",
+              marginTop: 5,
             }}
           >
-            <Image
-              source={{ uri: item.img }}
-              style={{
-                width: 40,
-                height: 40,
-                borderRadius: 50,
-                resizeMode: "contain",
-                margin: 8,
-              }}
-            />
-          </View>
+            View
+          </Text>
         </TouchableOpacity>
-        <Text style={styles.status}>{item.status}</Text>
       </View>
     );
   };
@@ -169,7 +160,7 @@ const Approve = ({ setClicked, window }) => {
             ListFooterComponent={<View />}
           />
         </View>
-        <Modal transparent={true} visible={show} key={setItemKey}>
+        <Modal transparent={true} visible={show} key={itemKey}>
           <View
             style={{
               backgroundColor: "#000000aa",
@@ -184,8 +175,8 @@ const Approve = ({ setClicked, window }) => {
                 marginRight: 30,
                 flex: 1,
                 // justifyContent: "center",
-                marginTop: 80,
-                marginBottom: 80,
+                marginTop: 180,
+                marginBottom: 450,
                 padding: 20,
               }}
             >
@@ -255,7 +246,7 @@ const Approve = ({ setClicked, window }) => {
                 {itemStatus}
               </Text>
 
-              <View
+              {/* <View
                 style={{
                   marginTop: 10,
                   flex: 1,
@@ -272,8 +263,8 @@ const Approve = ({ setClicked, window }) => {
                       height: "100%",
                     }}
                   />
-                )}
-              </View>
+                 )}
+              </View> */}
             </View>
           </View>
         </Modal>

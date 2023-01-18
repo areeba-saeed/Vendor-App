@@ -126,6 +126,7 @@ const PaymentRequests = ({ navigation }) => {
             padding: 10,
             flexDirection: "row",
             marginVertical: 0,
+            marginTop: 5,
             justifyContent: "space-between",
           }}
         >
@@ -154,9 +155,10 @@ const PaymentRequests = ({ navigation }) => {
         <View
           style={{
             alignSelf: "center",
+            marginTop: -20
           }}
         >
-          <UnApprove setClicked={setClicked} window="60%" />
+          <UnApprove setClicked={setClicked} window="65%"  />
         </View>
 
         {/* Approve Table */}
@@ -166,7 +168,7 @@ const PaymentRequests = ({ navigation }) => {
             flexDirection: "row",
             marginVertical: 0,
             justifyContent: "space-between",
-            marginTop:-200
+            marginTop:-130
           }}
         >
           <Text
@@ -194,10 +196,11 @@ const PaymentRequests = ({ navigation }) => {
         <View
           style={{
             alignSelf: "center",
+            marginTop: -25
             
           }}
         >
-          <Approve bottom={-135} setClicked={setClicked} window="60%" />
+          <Approve bottom={-125} setClicked={setClicked} window="65%" />
         </View>
       </View>
     </SafeAreaView>
