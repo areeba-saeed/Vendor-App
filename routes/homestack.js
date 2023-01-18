@@ -19,6 +19,9 @@ import PrivacyPolicy from "../src/screens/PrivacyPolicy";
 import Assign from "../src/screens/Assign";
 import Invoice1 from "../src/screens/Invoice1";
 import Users from "../src/screens/Users";
+import UnApprove from "../src/components/Unapprove";
+import UnApproveRequests from "../src/screens/UnApproveRequests";
+import ApproveRequests from "../src/screens/ApproveRequests";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +41,9 @@ export const MyStack = () => {
         <Stack.Screen name="User1" component={User1} />
         <Stack.Screen name="CreateUser" component={CreateUser} />
         <Stack.Screen name="Invoice1" component={Invoice1} />
+        <Stack.Screen name="UnApproveRequests" component={UnApproveRequests} />
+        <Stack.Screen name="ApproveRequests" component={ApproveRequests} />
+
         <Stack.Screen name="UpdateUser" component={UpdateUser} />
         <Stack.Screen name="Refuel" component={Refuel} />
         <Stack.Screen name="PaymentForm" component={PaymentForm} />

@@ -12,6 +12,7 @@ import Invoice from "../src/screens/Invoice";
 import Devices from "../src/screens/Devices";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Users from "../src/screens/Users";
+import PaymentRequests from "../src/screens/PaymentRequests";
 
 const Drawer = createDrawerNavigator();
 
@@ -33,7 +34,7 @@ export function DrawerContent(props) {
       <Drawer.Screen name="Devices" component={Devices} />
       <Drawer.Screen name="Invoice" component={Invoice} />
       <Drawer.Screen name="History" component={History} />
-
+      <Drawer.Screen name="Payment Requests" component={PaymentRequests} />
       <Drawer.Screen name="My Accounts" component={PaymentInfo} />
       <Drawer.Screen name="Notifications" component={Notifications} />
       <Drawer.Screen name="About Us" component={AboutUs} />
