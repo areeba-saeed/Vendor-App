@@ -14,7 +14,6 @@ const UnApprove = ({ setClicked, window }) => {
   const [itemInfo, setItemInfo] = useState("");
   const [itemInfoId, setItemInfoId] = useState("");
   const [itemKey, setItemKey] = useState();
-  const [itemAmpount, setItemAmount] = useState("");
   const [itemStatus, setItemStatus] = useState("");
   const [itemCreationDate, setItemCreationDate] = useState("");
   const [itemNoOfDevices, setItemNoOfDevices] = useState("");
@@ -111,7 +110,6 @@ const UnApprove = ({ setClicked, window }) => {
             setItemKey(index);
             setShow(true);
             setItemInfoId(item.userId);
-            setItemAmount(item.amount);
             setItemCreationDate(item.creationDate);
             setItemNoOfDevices(item.noOfDevices);
             setItemStatus(item.status);

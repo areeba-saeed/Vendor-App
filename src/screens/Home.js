@@ -232,7 +232,7 @@ const Home = ({ navigation }) => {
               // justifyContent: "center",
               height: windowHeight - 350,
               width: windowWidth,
-              marginTop: "5%",
+              marginTop: -30,
               marginLeft: "5%",
               marginRight: "10%",
               marginBottom: "5%",
@@ -243,7 +243,7 @@ const Home = ({ navigation }) => {
             <Image
               source={require("../../assets/images/logo_1.png")}
               style={{
-                height: windowHeight - 500,
+                height: windowHeight - 300,
                 width: windowWidth - 120,
                 alignItems: "center",
                 resizeMode: "contain",

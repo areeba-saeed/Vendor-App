@@ -135,7 +135,6 @@ const Approve = ({ setClicked, window }) => {
           </View>
         </TouchableOpacity>
         <Text style={styles.status}>{item.status}</Text>
-
       </View>
     );
   };
@@ -242,8 +241,7 @@ const Approve = ({ setClicked, window }) => {
                   setShow(false);
                 }}
               >
-                                {itemCreationDate}
-
+                {itemCreationDate}
               </Text>
               <Text
                 style={{
@@ -318,7 +316,7 @@ const styles = StyleSheet.create({
     marginLeft: 4,
     marginRight: "10%",
     fontSize: 12,
-    color:"green"
+    color: "green",
   },
   row: {
     flexDirection: "row",

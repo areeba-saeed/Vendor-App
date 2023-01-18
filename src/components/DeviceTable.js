@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#D9DDDC",
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingLeft: "6%",
+    paddingLeft: "3%",
     width: windowWidth,
   },
 
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   text: {
     width: "33%",
     marginTop: 8,
-    marginLeft: 4,
+    marginLeft: -2,
     fontSize: 12,
   },
   row: {
@@ -128,7 +128,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginLeft: "4%",
     width: windowWidth,
-
   },
 
   icon: {
