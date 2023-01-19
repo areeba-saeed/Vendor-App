@@ -10,7 +10,7 @@ import UserTable from "../components/UserTable";
 import Notifications from "./Notifications";
 import Users from "./Users";
 import SearchBar from "../components/SearchBar";
-// import Noti from "./Noti";
+import Noti from "./Noti";
 
 const Home = ({ navigation }) => {
   const nav = useNavigation();
@@ -205,6 +205,7 @@ const Home = ({ navigation }) => {
               flexDirection: "row",
               justifyContent: "space-between",
               marginTop: 20,
+              marginBottom: "10%"
             }}
           >
             <TouchableOpacity onPress={() => nav.openDrawer()}>
@@ -230,11 +231,11 @@ const Home = ({ navigation }) => {
               alignItems: "center",
               // marginTop: windowHeight - 700,
               // justifyContent: "center",
-              height: windowHeight - 350,
+              height: "100%",
               width: windowWidth,
-              marginTop: -30,
-              marginLeft: "5%",
-              marginRight: "10%",
+              marginTop: "-5%",
+              marginLeft: "10%",
+              marginRight: "12%",
               marginBottom: "5%",
 
               // alignItems: "center",
@@ -243,8 +244,8 @@ const Home = ({ navigation }) => {
             <Image
               source={require("../../assets/images/logo_1.png")}
               style={{
-                height: windowHeight - 300,
-                width: windowWidth - 120,
+                height: "90%",
+                width: "80%",
                 alignItems: "center",
                 resizeMode: "contain",
               }}
@@ -302,9 +303,9 @@ const Home = ({ navigation }) => {
           />
         </View>
       </View>
-      {/* <View>
+      <View>
         <Noti />
-      </View> */}
+      </View>
     </SafeAreaView>
   );
 };

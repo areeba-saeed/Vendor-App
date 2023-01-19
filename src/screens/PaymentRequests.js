@@ -168,7 +168,7 @@ const PaymentRequests = ({ navigation }) => {
             flexDirection: "row",
             marginVertical: 0,
             justifyContent: "space-between",
-            marginTop:-130
+            marginTop:"-40%"
           }}
         >
           <Text
@@ -196,7 +196,7 @@ const PaymentRequests = ({ navigation }) => {
         <View
           style={{
             alignSelf: "center",
-            marginTop: -25
+            marginTop: "-5%"
             
           }}
         >

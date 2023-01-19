@@ -17,24 +17,23 @@ const InvoiceTable = ({ setClicked, data }) => {
         <Text style={styles.text}>{item.Invoice_No}</Text>
         <Text style={styles.text}>{item.status}</Text>
         <Text style={styles.text}>{item.Amount}</Text>
-
+        <View style={{ width: "20%", marginLeft: 20 }}>
         <TouchableOpacity onPress={() => navigation.navigate(Invoice1)}>
           <Text
             style={{
               backgroundColor: "orange",
-              width: 60,
               textAlign: "center",
               fontSize: 12,
-              // paddingTop: "1%",
+              padding: 5,
               color: "white",
               borderRadius: 5,
-              marginRight: "12%",
               marginTop: 5,
             }}
           >
             Invoice
           </Text>
         </TouchableOpacity>
+        </View>
       </View>
     );
   };
@@ -86,29 +85,29 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: "#D9DDDC",
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
   },
 
   headtext: {
-    width: windowWidth - 600,
-    marginLeft: 4,
-    marginRight: 20,
+    // borderColor:"red",
+    // borderWidth:2,
+    width: "100%",
+    textAlign: "center",
   },
   view: {
     height: 0,
   },
   text: {
-    width: windowWidth - 600,
+    width: "25%",
     marginTop: 8,
-    marginLeft: 4,
-    marginRight: 20,
+    textAlign: "center",
     fontSize: 12,
   },
   row: {
     flexDirection: "row",
     backgroundColor: "lightgray",
-    justifyContent: "space-between",
-    marginLeft: 20,
+    // justifyContent: "space-between",
+    marginLeft: 4,
   },
 
   icon: {

@@ -248,15 +248,31 @@ const Invoice1 = ({ navigation }) => {
                 ) : (
                   <View
                     style={{
-                      width: 250,
-                      height: 200,
+                      width: "100%",
+                      height: "20%",
                       flex: 1,
                       justifyContent: "center",
                       alignItems: "center",
                       marginBottom: 60,
+                      // borderColor: "red",
+                      // borderWidth: 2,
                     }}
                   >
-                    <Text>No image</Text>
+                    <View
+                      style={{
+                        width: "20%",
+                        flex: 1,
+                        marginBottom: 30,
+                        marginTop: 30,
+                        justifyContent: "center",
+                        alignItems: "center",
+                        // borderColor: "grey",
+                        // borderStyle:"dashed",
+                        // borderWidth: 1,
+                      }}
+                    >
+                      <Text>No image</Text>
+                    </View>
                   </View>
                 )}
                 <TouchableOpacity

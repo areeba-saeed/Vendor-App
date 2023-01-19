@@ -118,7 +118,7 @@ const Device1 = ({ navigation }) => {
               height: 135,
               backgroundColor: "#E6E6E6",
               position: "absolute",
-              right:20,
+              right: 20,
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "space-evenly",
@@ -140,7 +140,9 @@ const Device1 = ({ navigation }) => {
           style={{
             marginLeft: 10,
             marginRight: 10,
-            marginTop: "5%",
+            position: "absolute",
+            bottom: 20,
+            width:"95%"
           }}
         >
           <Button

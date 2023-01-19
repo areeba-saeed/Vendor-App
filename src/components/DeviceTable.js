@@ -15,11 +15,18 @@ const Item = ({ DeviceId, status, index }) => {
       <Text style={styles.text}>{DeviceId}</Text>
       <Text style={styles.text}>{status}</Text>
 
-      <TouchableOpacity onPress={() => navigation.navigate(VendorDevice1)}>
-        <View style={{ marginRight: 190 }}>
+      <View
+        style={{
+          width: "33.33%",
+          alignItems: "center",
+          // borderColor: "red",
+          // borderWidth: 2,
+        }}
+      >
+        <TouchableOpacity onPress={() => navigation.navigate(VendorDevice1)}>
           <FontAwesome5Icon name="angle-right" size={25} color="orange" />
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -103,43 +110,30 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: "#D9DDDC",
     flexDirection: "row",
-    justifyContent: "space-between",
-    paddingLeft: "3%",
-    width: windowWidth,
+    // justifyContent: "space-between",
   },
 
   headtext: {
-    width: windowWidth - 600,
-    marginLeft: 4,
-    marginRight: 20,
+    // borderColor: "red",
+    // borderWidth: 2,
+    width: "100%",
+    textAlign: "center",
   },
   view: {
     height: 0,
   },
   text: {
-    width: "33%",
+    // borderColor: "red",
+    // borderWidth: 2,
+    width: "33.33%",
+    textAlign: "center",
     marginTop: 8,
-    marginLeft: -2,
     fontSize: 12,
   },
   row: {
     flexDirection: "row",
     backgroundColor: "lightgray",
-    justifyContent: "space-between",
-    marginLeft: "4%",
-    width: windowWidth,
-
-  },
-
-  icon: {
-    marginLeft: "5%",
-  },
-  icons: {
-    marginTop: 8,
-    width: "23%",
-    marginRight: windowWidth - 350,
-    flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
   },
 });
 

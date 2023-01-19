@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   },
 
   headtext: {
-    width: windowWidth - 600,
+    width: windowWidth - 400,
     marginLeft: 4,
     marginRight: 20,
   },

@@ -99,33 +99,33 @@ const Approve = ({ setClicked, window }) => {
         <Text style={styles.text}>{item.amount}</Text>
         <Text style={styles.status}>{item.status}</Text>
 
-        <TouchableOpacity
-          onPress={() => {
-            setItemKey(index);
-            setShow(true);
-            setItemInfoId(item.userId);
-            setItemCreationDate(item.creationDate);
-            setItemNoOfDevices(item.noOfDevices);
-            setItemStatus(item.status);
-            setItemName(item.username);
-          }}
-        >
-          <Text
-            style={{
-              backgroundColor: "orange",
-              width: 60,
-              textAlign: "center",
-              fontSize: 12,
-              padding: 5,
-              color: "white",
-              borderRadius: 5,
-              marginRight: "10%",
-              marginTop: 5,
+        <View style={{ width: "20%", marginLeft: 20 }}>
+          <TouchableOpacity
+            onPress={() => {
+              setItemKey(index);
+              setShow(true);
+              setItemInfoId(item.userId);
+              setItemCreationDate(item.creationDate);
+              setItemNoOfDevices(item.noOfDevices);
+              setItemStatus(item.status);
+              setItemName(item.username);
             }}
           >
-            View
-          </Text>
-        </TouchableOpacity>
+            <Text
+              style={{
+                backgroundColor: "orange",
+                textAlign: "center",
+                fontSize: 12,
+                padding: 5,
+                color: "white",
+                borderRadius: 5,
+                marginTop: 5,
+              }}
+            >
+              View
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   };
@@ -176,7 +176,8 @@ const Approve = ({ setClicked, window }) => {
                 flex: 1,
                 // justifyContent: "center",
                 marginTop: 180,
-                marginBottom: 450,
+                marginBottom: "65%",
+                justifyContent: "center",
                 padding: 20,
               }}
             >
@@ -245,26 +246,6 @@ const Approve = ({ setClicked, window }) => {
               >
                 {itemStatus}
               </Text>
-
-              {/* <View
-                style={{
-                  marginTop: 10,
-                  flex: 1,
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: 5,
-                }}
-              >
-                {itemInfo && (
-                  <Image
-                    source={{ uri: itemInfo }}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  />
-                 )}
-              </View> */}
             </View>
           </View>
         </Modal>
@@ -283,37 +264,39 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: "#D9DDDC",
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
   },
 
   headtext: {
-    width: windowWidth - 600,
-    marginLeft: 4,
-    marginRight: 20,
+    // borderColor:"red",
+    // borderWidth:2,
+    width: "100%",
+    textAlign: "center",
   },
   view: {
     height: 0,
   },
   text: {
-    width: windowWidth - 600,
+    // borderColor: "red",
+    // borderWidth: 2,
+    width: "25%",
+    textAlign: "center",
     marginTop: 8,
-    marginLeft: 4,
-    marginRight: 20,
     fontSize: 12,
   },
   status: {
-    width: windowWidth - 600,
+    width: "25%",
     marginTop: 8,
-    marginLeft: 4,
-    marginRight: "10%",
     fontSize: 12,
+    textAlign: "center",
     color: "green",
+    // borderColor: "red",
+    // borderWidth: 2,
   },
   row: {
     flexDirection: "row",
     backgroundColor: "lightgray",
-    justifyContent: "space-between",
-    marginLeft: 20,
+    // justifyContent: "space-between",
   },
 
   icon: {

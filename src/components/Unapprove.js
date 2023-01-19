@@ -105,6 +105,9 @@ const UnApprove = ({ setClicked, window }) => {
         <Text style={styles.text}>{item.userId}</Text>
         <Text style={styles.text}>{item.amount}</Text>
         <TouchableOpacity
+          style={{
+            width: "25%",
+          }}
           onPress={() => {
             setItemInfo(item.img);
             setItemKey(index);
@@ -119,46 +122,45 @@ const UnApprove = ({ setClicked, window }) => {
           <View
             style={{
               alignItems: "center",
-              height: 20,
-              width: 20,
-              marginLeft: "12%",
-              marginBottom: "50%",
+              justifyContent: "center",
+              height: 30,
+              marginBottom: "5%",
             }}
           >
             <Image
               source={{ uri: item.img }}
               style={{
-                width: 40,
-                height: 40,
+                width: 30,
+                height: 30,
                 borderRadius: 50,
                 resizeMode: "contain",
-                margin: 8,
+                // margin: 8,
               }}
             />
           </View>
         </TouchableOpacity>
+        <View style={{ width: "20%", marginLeft: 20 }}>
         <TouchableOpacity
           onPress={() => {
             approveButton();
             setApproval(item.userId);
           }}
         >
-          <Text
-            style={{
-              backgroundColor: "orange",
-              width: 60,
-              textAlign: "center",
-              fontSize: 12,
-              padding: 5,
-              color: "white",
-              borderRadius: 5,
-              marginRight: "10%",
-              marginTop: "10%",
-            }}
-          >
-            Approve
-          </Text>
+            <Text
+              style={{
+                backgroundColor: "orange",
+                textAlign: "center",
+                fontSize: 12,
+                padding: 5,
+                color: "white",
+                borderRadius: 5,
+                marginTop: 5,
+              }}
+            >
+              Approve
+            </Text>
         </TouchableOpacity>
+          </View>
       </View>
     );
   };
@@ -316,29 +318,32 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: "#D9DDDC",
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
   },
-
+  
   headtext: {
-    width: windowWidth - 600,
-    marginLeft: 4,
-    marginRight: 20,
+    // borderColor:"red",
+    // borderWidth:2,
+    width: "100%",
+    textAlign: "center",
+
+    // marginLeft: 4,
+    // marginRight: 20,
   },
   view: {
     height: 0,
   },
   text: {
-    width: windowWidth - 600,
+    width: "25%",
     marginTop: 8,
-    marginLeft: 4,
-    marginRight: 20,
+    textAlign: "center",
     fontSize: 12,
   },
   row: {
     flexDirection: "row",
     backgroundColor: "lightgray",
-    justifyContent: "space-between",
-    marginLeft: 20,
+    // justifyContent: "space-between",
+    marginLeft: 4,
   },
 
   icon: {

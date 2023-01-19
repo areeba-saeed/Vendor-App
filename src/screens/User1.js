@@ -175,38 +175,38 @@ const styles = StyleSheet.create({
   head: {
     height: 70,
     backgroundColor: "#D9DDDC",
+    paddingLeft: 20,
     flexDirection: "row",
-    justifyContent: "space-between",
   },
 
   headtext: {
-    width: windowWidth - 240,
-    marginLeft: 20,
-    marginRight: 20,
+    width: "100%",
+    // borderColor:"red",
+    // borderWidth:2,
   },
   view: {
     height: 0,
   },
   text: {
-    width: windowWidth - 250,
-    marginTop: 8,
-    marginLeft: 30,
-    marginRight: 20,
+    width: "50%",
+    // borderColor:"red",
+    // borderWidth:2,
+    paddingLeft:20,
+
+
     fontSize: 12,
   },
   row: {
     flexDirection: "row",
-    justifyContent: "space-between",
     backgroundColor: "lightgray",
   },
 
   btn: {
-    width: "33%",
+    width: "50%",
     backgroundColor: "rgb(255, 177, 33)",
     borderRadius: 2,
     marginTop: 8,
     marginRight: "40%",
-    marginLeft: -30,
   },
   btnText: {
     textAlign: "center",
